@@ -10,4 +10,7 @@ import { RouterOutlet } from '@angular/router';
 })
 export class AppComponent {
   title = 'my-dream-app';
+	name = "Bryan Larico R.";
+	email = "blaricor@unsa.edu.pe";
+	webpage = "http://www.unsa.edu.pe";
 }
