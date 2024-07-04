@@ -23,6 +23,12 @@ export class AppComponent {
 	sayHello() {
 		alert("Hola desde app.component");
 	}
+	addUser(newUser:any){
+		this.users.push(newUser.value);
+		newUser = '';
+		newUser.focus();
+		return false;
+	}
 	deleteUser(user:any) {
 		for(let i=0; i<this.users.length; i++){
 			if(user==this.users[i]){

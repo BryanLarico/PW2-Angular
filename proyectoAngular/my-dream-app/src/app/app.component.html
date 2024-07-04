@@ -3,6 +3,10 @@
 <div class = "black">
 	<h1>Desde app.component</h1>
 </div>
+<form (submit)="addUser(newUser)">
+	<input type="text" #newUser> 
+	<button>Agregar Usuario</button>
+</form>
 <div class="ash">
 	<ul>
 		<li *ngFor="let user of users">
