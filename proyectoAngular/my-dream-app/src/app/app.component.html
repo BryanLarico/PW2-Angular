@@ -5,9 +5,8 @@
 </div>
 <div class="ash">
 	<ul>
-		<li *ngFor="let user of users">
-			<app-user [nameUser]="user"></app-user>
-		</li>
+		<app-user *ngFor="let user of users" [nameUser]="user"></app-user>
 	</ul>
+	<button (click)="sayHello()">Hazme click</button>
 </div>
 		

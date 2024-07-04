@@ -19,4 +19,8 @@ import { UserComponent } from './user/user.component'
 export class AppComponent {
   users = ['jhon','jhonny','joe','cameron'];
 	activated = false;
+	
+	sayHello() {
+		alert("Hola desde app.component");
+	}
 }
