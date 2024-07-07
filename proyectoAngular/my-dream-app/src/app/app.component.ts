@@ -2,7 +2,8 @@ import { Component } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
 import { CommonModule } from '@angular/common';
 import { HelloWorldComponent } from './hello-world/hello-world.component';
-import { UserComponent } from './user/user.component' 
+import { UserComponent } from './user/user.component';
+import { FormsModule } from '@angular/forms';
 
 @Component({
   selector: 'app-root',
@@ -12,28 +13,12 @@ import { UserComponent } from './user/user.component'
 		CommonModule, 
 		HelloWorldComponent,
 		UserComponent,
+		FormsModule,
 	],
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  users = ['jhon','jhonny','joe','cameron'];
-	activated = false;
-	
-	sayHello() {
-		alert("Hola desde app.component");
-	}
-	addUser(newUser:any){
-		this.users.push(newUser.value);
-		newUser = '';
-		newUser.focus();
-		return false;
-	}
-	deleteUser(user:any) {
-		for(let i=0; i<this.users.length; i++){
-			if(user==this.users[i]){
-				this.users.splice(i,1);
-			}
-		}
-	}
+  name : string = "Bryan Larico R.";
+	age : number = 40;
 }
