@@ -23,12 +23,14 @@ import { DataService } from './data.service';
   providers: [DataService]  // Asegúrate de que DataService está en providers
 })
 export class AppComponent {
-  name: string = "Bryan Larico R.";
+  title: string = "my-dream-app";
   age: number = 40;
-  
+  posts: any[] = [];
+	
   constructor(private dataService: DataService) {
     this.dataService.getData().subscribe(data => {
-      console.log(data);
+      //console.log(data);
+			this.posts = data;
     });
   }
 }
