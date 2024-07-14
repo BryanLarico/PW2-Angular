@@ -16,15 +16,17 @@ import { DataService } from './data.service';
     HelloWorldComponent,
     UserComponent,
     FormsModule,
-    HttpClientModule,  // Asegúrate de importar HttpClientModule aquí
+    HttpClientModule,
   ],
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.css'],
-  providers: [DataService]  // Asegúrate de que DataService está en providers
+  providers: [DataService] 
 })
 export class AppComponent {
   title: string = "my-dream-app";
+	name: string = 'Bryan Larico R.';
   age: number = 40;
+	email: string = 'blaricor@unsa.edu.pe';
   posts: any[] = [];
 	
   constructor(private dataService: DataService) {
